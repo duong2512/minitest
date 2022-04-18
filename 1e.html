@@ -17,30 +17,24 @@
 <script>
     function kEtqua(){
         let a = document.getElementById("a").value;
-        a = parseFloat(a)
+        a = parseInt(a)
         let b = document.getElementById("b").value;
-        b = parseFloat(b)
+        b = parseInt(b)
         let c = document.getElementById("c").value;
-        c = parseFloat(c)
-        if (a<b+c){
-            if (a+c>b){
-                if (c+b>a){
-                    if (a===b){
-                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
-                    }else if(b===c){
-                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
-                    }else if (a===c){
-                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
-                    }else {
-                        document.getElementById("ketqua").innerHTML = "Đây không phải là tam giác";
-                    }
-                    document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
-                }
-                document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
+        c = parseInt(c)
+        if (a<b+c && a+c>b && c+b>a){
+            document.getElementById("ketqua").innerHTML = "Là 1 tam giác"
+            if (a*a===(b*b+c*c) || b*b===(a*a+c*c) || c*c===(a*a+b*b)){
+                document.getElementById("ketqua").innerHTML = "Đây l tam giác vuông"}
+                else if ((a===b)&&(a===c)&&(b===c)){
+                document.getElementById("ketqua").innerHTML = "Đây l tam giác đều"
             }
-            document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
-        }else{
-            document.getElementById("ketqua").innerHTML = "Đây không phải là tam giác";
+                else if ((a===b)||(a===c)||(b===c)){
+                document.getElementById("ketqua").innerHTML = "Đây l tam giác cân"
+            }
+        }else {
+            document.getElementById("ketqua").innerHTML = "Không phải là 1 tam giác"
         }
     }
+
 </script>
