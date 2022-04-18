@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input id="a" type="number"> Nhập A<br>
+    <input id="b" type="number"> Nhập b<br>
+    <button type="button" onclick="ketquaa()">Kết Quả</button><br>
+    lũy thừa A^2 = <p id="e"></p><br>
+    Lũy thừa A^B = <p id="f"></p><br>
+</p>
+</body>
+</html>
+<script>
+    function ketquaa(){
+        let a = document.getElementById("a").value;
+        a = parseFloat(a);
+        let b = document.getElementById("b").value;
+        b = parseFloat(b);
+        let e = a**2;
+        let f = a**b;
+        document.getElementById("e").innerHTML = e;
+        document.getElementById("f").innerHTML = f;
+
+    }
+</script>

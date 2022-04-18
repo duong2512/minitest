@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input type="number" id="a"> Nhập a <br>
+    <input type="number" id="b"> Nhập b <br>
+    <input type="number" id="c"> Nhập c <br>
+    <button type="button" onclick="kEtqua()">Kết quả</button>
+<p id="ketqua"></p>
+</p>
+</body>
+</html>
+<script>
+    function kEtqua(){
+        let a = document.getElementById("a").value;
+        a = parseFloat(a)
+        let b = document.getElementById("b").value;
+        b = parseFloat(b)
+        let c = document.getElementById("c").value;
+        c = parseFloat(c)
+        if (a<b+c){
+            if (a+c>b){
+                if (c+b>a){
+                    if (a===b){
+                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
+                    }else if(b===c){
+                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
+                    }else if (a===c){
+                        document.getElementById("ketqua").innerHTML = "Đây là tam giác cân";
+                    }else {
+                        document.getElementById("ketqua").innerHTML = "Đây không phải là tam giác";
+                    }
+                    document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
+                }
+                document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
+            }
+            document.getElementById("ketqua").innerHTML = "Đây là 1 tam giác";
+        }else{
+            document.getElementById("ketqua").innerHTML = "Đây không phải là tam giác";
+        }
+    }
+</script>

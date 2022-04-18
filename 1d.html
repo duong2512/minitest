@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập Năm :
+<input id="a" type="number"><br>
+<button type="button" onclick="ketquaaaa()">Kết Quả</button><br>
+Thế kỷ : <p id="theky"></p>
+</body>
+</html>
+<script>
+    function ketquaaaa(){
+        let a = document.getElementById("a").value;
+        a = parseInt(a);
+        let theky;
+        if (a%100 ===0){
+            theky=parseInt(a/100+1);
+        }else {
+            theky=parseInt(a/100+1);
+        }
+        document.getElementById('theky').innerHTML = theky
+    }
+</script>

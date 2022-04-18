@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input type="number" id="num">
+    <button type="button" onclick="ketqua()">Kết Quả</button>
+<p id="ketquaa"></p>
+</p>
+</body>
+</html>
+<script>
+    function ketqua(){
+        let a = document.getElementById('num').value;
+        a = parseInt(a);
+        let check = true;
+        if (a % 2 === 0){
+            document.getElementById("ketquaa").innerHTML = "số này chia hết cho 2" ;
+        }else {
+            for (let i=2;i<=a/2;i++){
+                if (a%i===0){
+                    document.getElementById("ketquaa").innerHTML = "đây không phải là số nguyên tố";
+                    check=false
+                    break;
+                }
+            }if (check){
+                document.getElementById("ketquaa").innerHTML = "đây là số nguyên tố";
+        }
+        }
+    }
+
+</script>

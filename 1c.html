@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input id="a" type="number"> Nhập A<br>
+    <input id="b" type="number"> Nhập B<br>
+    <button type="button" onclick="ketquaaa()">Kết Quả</button><br>
+</p>
+     Tổng các số từ A => B = <p id="sum"></p>
+</body>
+</html>
+<script>
+    function ketquaaa(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        a = parseFloat(a)
+        b = parseFloat(b)
+        let sum = 0 ;
+        for (let i=a;i<=b;i++){
+            sum=sum+i;
+        }
+        document.getElementById("sum").innerHTML = sum
+    }
+</script>
